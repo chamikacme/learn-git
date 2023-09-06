@@ -2,7 +2,14 @@ First line.
 Second line.
 Third line.
 Fourth line (branch-a)
+Fourth line (branch-b).
 Fifth line (branch-a).
+Fifth line (branch-b).
 Sixth line (branch-a).
+Sixth line (branch-b).
 Seventh line (branch-a).
+Seventh line (branch-b).
+<<<<<<< HEAD
+=======
+>>>>>>> branch-b
 
