@@ -140,5 +140,33 @@ sudo apt install gitk
 gitk --all
 ```
 
+## Conflict Handling
+
+Conflicts Handling is needed when when the files that are tried to merge are having conflicts. Then those conflicts will show as follows.
+
+```
+// Content without conflicts.
+<<<<<< HEAD
+// ...
+// Content from active branch.
+// ...
+======
+// ...
+// Content from source branch.
+// ...
+>>>>>> <source-branch-name>
+```
+
+There few options available in conflict handling.
+
+1. Keep the content from active branch and disregard the content from source branch.
+2. Keep the content from source branch and disregard the content from active branch.
+3. Keep the content from both branches.
+4. Disregard the content from both branches.
+5. Edit the file in some other way.
+
+The suitable option should be selected depending on the scenario.
+
+
 ## Resources Used
 For this task, I mainly referred `Git මුල් පොත` by `Supun Budhajeewa` and internet resources.
