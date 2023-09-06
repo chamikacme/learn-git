@@ -3,4 +3,5 @@ Second line.
 Third line.
 Fourth line (branch-b).
 Fifth line (branch-b).
+Sixth line (branch-b).
 
