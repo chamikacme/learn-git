@@ -9,7 +9,5 @@ Sixth line (branch-a).
 Sixth line (branch-b).
 Seventh line (branch-a).
 Seventh line (branch-b).
-<<<<<<< HEAD
-=======
->>>>>>> branch-b
+Eighth line.
 
