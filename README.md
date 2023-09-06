@@ -130,7 +130,7 @@ git tag <tag_name>
 git push <remote_name> <tag_name>
 ```
 
-**Install gitk on for git tree**
+**Install gitk for git tree**
 ```
 sudo apt install gitk
 ```
@@ -167,6 +167,16 @@ There few options available in conflict handling.
 
 The suitable option should be selected depending on the scenario.
 
+## SSH Key Pair
+
+When pushing changes to a remote repository, it's essential to verify that, whether the person who sends the data is an authorized person. For that SSH key pair is used. In here, SSH key pair is created, with a public key and a private key. The public key is sent to the remote repository. The private key is kept safely with the authorized person. When an update is send, remote repository can verify the sender by comparing the public key they have with private key which the user has.
+
+In Ubuntu, a SSH key pair can be create using following command. Press Enter in next steps to keep the default settings or you can change those as you need.
+```
+sss-keygen
+```
+
+Then a key pair will be create in `'<home-path>/.ssh'` directory (or in the directory you specified). In that directory, `id_rsa.pub` will contain the public key. Open it with a text editor to copy the text, and add it on your remote repository.
 
 ## Resources Used
 For this task, I mainly referred `Git මුල් පොත` by `Supun Budhajeewa` and internet resources.
