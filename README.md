@@ -1,7 +1,7 @@
 
 # git-test: A Practice Project for Git and GitHub 
 
-This project was done to get more familirized with version controlling with Git and GitHub. I have shared some of my learnings below.
+This project was done to get more familiar with version control with Git and GitHub. I have shared some of my findings below.
 
 ## Some useful Git Commands
 
@@ -142,7 +142,7 @@ gitk --all
 
 ## Conflict Handling
 
-Conflicts Handling is needed when when the files that are tried to merge are having conflicts. Then those conflicts will show as follows.
+Conflict handling is needed when the files that are trying to merge have conflicts. Then those conflicts will show up as follows:
 
 ```
 // Content without conflicts.
@@ -157,10 +157,10 @@ Conflicts Handling is needed when when the files that are tried to merge are hav
 >>>>>> <source-branch-name>
 ```
 
-There few options available in conflict handling.
+There are few options available for conflict handling.
 
-1. Keep the content from active branch and disregard the content from source branch.
-2. Keep the content from source branch and disregard the content from active branch.
+1. Keep the content from the active branch and disregard the content from the source branch.
+2. Keep the content from the source branch and disregard the content from the active branch.
 3. Keep the content from both branches.
 4. Disregard the content from both branches.
 5. Edit the file in some other way.
@@ -169,14 +169,28 @@ The suitable option should be selected depending on the scenario.
 
 ## SSH Key Pair
 
-When pushing changes to a remote repository, it's essential to verify that, whether the person who sends the data is an authorized person. For that SSH key pair is used. In here, SSH key pair is created, with a public key and a private key. The public key is sent to the remote repository. The private key is kept safely with the authorized person. When an update is send, remote repository can verify the sender by comparing the public key they have with private key which the user has.
+When pushing changes to a remote repository, it's essential to verify that the person who sends the data is an authorised person. For that, an SSH key pair is used. Here, an SSH key pair is created, with a public key and a private key. The public key is sent to the remote repository. The private key is kept safely with the authorised person. When an update is sent, a remote repository can verify the sender by comparing the public key they have with the private key that the user has.
 
-In Ubuntu, a SSH key pair can be create using following command. Press Enter in next steps to keep the default settings or you can change those as you need.
+
+In Ubuntu, a SSH key pair can be created using the following command: Press Enter in the next steps to keep the default settings, or you can change those as you need.
 ```
 sss-keygen
 ```
 
-Then a key pair will be create in `'<home-path>/.ssh'` directory (or in the directory you specified). In that directory, `id_rsa.pub` will contain the public key. Open it with a text editor to copy the text, and add it on your remote repository.
+Then a key pair will be created in the `'<home-path>/.ssh'` directory (or in the directory you specified). In that directory, `id_rsa.pub` will contain the public key. Open it with a text editor to copy the text, and add it to your remote repository.
+
+## git fletch and git pull
+
+In the Fletch method, it doesn't update the files in the local repository. It just fetches information and checks whether it has been updated. To get those data, it needs to merge the remote repository's changes (commits) into the local repository. The following commands can be used for that.
+```
+git fetch
+git merge <remote_name>/<remote_branch_name>
+```
+
+In the pull method, it directly updates the local files with changes in the remote repository. It does the combined function of both `fletch` and `merge`.
+```
+git pull
+```
 
 ## Resources Used
-For this task, I mainly referred `Git මුල් පොත` by `Supun Budhajeewa` and internet resources.
+For this task, I mainly referred to `Git මුල් පොත` by `Supun Budhajeewa` and internet resources.
