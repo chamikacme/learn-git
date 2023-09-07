@@ -1,7 +1,7 @@
 
-# git-test: A Practice Project for Git and GitHub 
+# learn-git: A Beginner Guide for Git Commands
 
-This is a guide to get more familiar with version control using Git and GitHub and this will give the a excellent start to begin your journey with Git. This will updated continuously. Star repository and keep in touch. Feel free to provide any feedback via the contacts in the bottom.
+This is a guide to get more familiar with version control using Git and remote repositories such as GitHub. This will give the a excellent start to begin your journey with Git. This repository will be updated continuously. Star this repository and keep in touch. Feel free to provide any feedback via the contacts in the bottom.
 
 ## Some useful Git Commands
 
