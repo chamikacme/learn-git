@@ -1,7 +1,7 @@
 
 # git-test: A Practice Project for Git and GitHub 
 
-This project was done to get more familiar with version control with Git and GitHub. I have shared some of my findings below.
+This is a guide to get more familiar with version control using Git and GitHub and this will give the a excellent start to begin your journey with Git. This will updated continuously. Star repository and keep in touch. Feel free to provide any feedback via the contacts in the bottom.
 
 ## Some useful Git Commands
 
@@ -71,6 +71,8 @@ git branch <branch_name>
 ```
 
 **Switch to an another branch**
+
+Adding option `-b` will create a new branch with given branch_name and checkout to it. (Ex: `git checkout -b <branch_name>`)
 ```
 git checkout <branch_name>
 ```
@@ -100,7 +102,9 @@ git remote add <remote_name> <remote_url>
 git push <remote_name> -u <remote_branch_name>
 ```
 
-**Push changes in current branch to already setted tracking branch in remote repository**
+**Push changes in current branch to already set tracking branch in remote repository**
+
+`--force` will forcefully send current commit, disregarding commits that are ahead in remote repository.
 ```
 git push
 ```
@@ -113,6 +117,38 @@ git clone <remote_url>
 **Pull updates on remote repository**
 ```
 git pull
+```
+
+**Fetch data from remote repository (Without pulling)**
+
+Adding `--prune` option will delete all the files that are not reachable from the current branch.
+```
+git fetch
+```
+
+**Prune data from remote repository (Without fetching)**
+```
+git remote prune
+```
+
+**Set prune default with fetch**
+```
+git config –global fetch.prune true
+
+```
+
+**Reset to previous commit**
+
+There are three options, `--soft`, `--hard`, and `mixed`(default). `--soft` will remove commits and keep changes remain on staged area. `--mixed` will remove commits and keep changes in working area(unstaged). `--hard` will remove commits and all changes up to given commit.
+```
+git reset <previous_commit_id>
+```
+
+**Rebase current branch**
+
+There are two options, Standard (default) and `--interactive`. Standard (default) mode will rebase the branch automatically. The interactive mode will allow you to alter individual commits.
+```
+git rebase <base>
 ```
 
 **Add a tag to a specific commit**
@@ -169,28 +205,51 @@ The suitable option should be selected depending on the scenario.
 
 ## SSH Key Pair
 
-When pushing changes to a remote repository, it's essential to verify that the person who sends the data is an authorised person. For that, an SSH key pair is used. Here, an SSH key pair is created, with a public key and a private key. The public key is sent to the remote repository. The private key is kept safely with the authorised person. When an update is sent, a remote repository can verify the sender by comparing the public key they have with the private key that the user has.
+When pushing changes to a remote repository, it's essential to verify that the person who sends the data is an authorized person. For that, an SSH key pair is used. Here, an SSH key pair is created, with a public key and a private key. The public key is sent to the remote repository. The private key is kept safely with the authorized person. When an update is sent, a remote repository can verify the sender by comparing the public key they have with the private key that the user has.
 
 
 In Ubuntu, a SSH key pair can be created using the following command: Press Enter in the next steps to keep the default settings, or you can change those as you need.
 ```
-sss-keygen
+ssh-keygen
 ```
 
 Then a key pair will be created in the `'<home-path>/.ssh'` directory (or in the directory you specified). In that directory, `id_rsa.pub` will contain the public key. Open it with a text editor to copy the text, and add it to your remote repository.
 
-## git fletch and git pull
+## git fetch and git pull
 
-In the Fletch method, it doesn't update the files in the local repository. It just fetches information and checks whether it has been updated. To get those data, it needs to merge the remote repository's changes (commits) into the local repository. The following commands can be used for that.
+In the Fetch method, it doesn't update the files in the local repository. It just fetches information and checks whether it has been updated. To get those data, it needs to merge the remote repository's changes (commits) into the local repository. The following commands can be used for that.
 ```
 git fetch
 git merge <remote_name>/<remote_branch_name>
 ```
 
-In the pull method, it directly updates the local files with changes in the remote repository. It does the combined function of both `fletch` and `merge`.
+In the pull method, it directly updates the local files with changes in the remote repository. It does the combined function of both `fetch` and `merge`.
 ```
 git pull
 ```
 
+## git commit --amend
+
+`--amend` can be used with `git commit` command to add minor changes to the previous commit. It will not create a new commit, but alter the previous one. The staged changes will be committed.
+```
+git commit --amend --no-edit
+```
+`--no-edit` tag will help skip the entering commit message step, keeping the same commit message.
+
+This command can be used to update the commit message also.
+```
+git commit --amend -m "Updated commit message"
+```
+
 ## Resources Used
-For this task, I mainly referred to `Git මුල් පොත` by `Supun Budhajeewa` and internet resources.
+
++ `Git මුල් පොත` by `Supun Budhajeewa`
++ Internet resources.
+
+## Contact
+
++ [Email](mailto:chamikacme@gmail.com?subject=I%20visited%20your%20Git%20Commands%20Repository)
++ [LinkedIn](https://www.linkedin.com/in/chamikacme/)
+
+
+---
